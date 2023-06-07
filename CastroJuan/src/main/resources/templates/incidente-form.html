@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de Incidente</title>
+    <title>Formulario de Incidente de Seguridad</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="form-container">
+            <h1 class="text-center">Formulario de Incidente de Seguridad</h1>
+            <form th:action="@{/guardar-incidente}" method="post">
+                <div class="form-group">
+                    <label for="empresa">Empresa afectada:</label>
+                    <input type="text" id="empresaAfectada" name="empresaAfectada" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duracion">Duracion del incidente:</label>
+                    <input type="text" id="tiempoAfectado" name="tiempoAfectado" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="personasAfectadas">Personas afectadas:</label>
+                    <input type="number" id="personasAfectadas" name="personasAfectadas" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha del incidente:</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lugar">Lugar del incidente en Bogota:</label>
+                    <input type="text" id="lugar" name="lugar" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                    <label for="policia_id">ID del policia a cargo del caso:</label>
+                    <input type="text" id="policia_id" name="policia_id" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                
+                       <a  th:href="@{/pdf-agente-incidente}"class="btn btn-primary">Imprimir Incidentes</a>
+                       
+                   
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>

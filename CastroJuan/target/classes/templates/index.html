@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Índice</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+body {
+	padding: 20px;
+	font-family: "Arial", sans-serif;
+}
+
+.container {
+	padding: 5px;
+	color: black;
+	border-radius: 5px;
+}
+
+.bg-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+</style>
+</head>
+<body>
+	<img th:src="@{/images/FondoIndex.jpg}" class="bg-image" alt="Fondo">
+
+	<div class="container d-flex justify-content-center align-items-center"
+		style="height: 100vh;">
+		<div>
+			<h1 class="text-center text-light">Indice</h1>
+			<ul class="list-group">
+				<li class="list-group-item"><a th:href="@{/formp}"
+					class="btn btn-success btn-block">Agregar Agente</a></li>
+				<li class="list-group-item"><a th:href="@{/form}"
+					class="btn btn-success btn-block">Agregar Incidente</a></li>
+
+					
+					
+					<li class="list-group-item"><a th:href="@{/descargarPDFAgentesDiplomas}"
+					class="btn btn-success btn-block">Descargar Diplomas</a></li>
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

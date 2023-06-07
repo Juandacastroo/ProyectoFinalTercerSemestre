@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Formulario de Agente de Policía</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+body {
+	padding: 20px;
+}
+
+.form-container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="form-container">
+			<h1 class="text-center">Agente De Policia</h1>
+			<form th:action="@{/guardar-agente}" method="post">
+			
+				<div class="form-group">
+					<label for="nombre">Nombre:</label> <input type="text" id="nombre"
+						name="nombre" class="form-control" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="fechaNacimiento">Fecha de nacimiento :</label> <input
+						type="text" id="fechaNacimiento" name="fechaNacimiento"
+						class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="sexo">Sexo:</label> <input type="text" id="sexo"
+						name="sexo" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="fechaEntrada">Fecha de entrada a la
+						Institucion:</label> <input type="text" id="fechaEntrada"
+						name="fechaEntrada" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="rangoActual">Rango actual:</label> <input type="text"
+						id="rangoActual" name="rangoActual" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="numeroCasosAtendidos">Numero de casos
+						atendidos:</label> <input type="text" id="numeroCasosAtendidos"
+						name="numeroCasosAtendidos" class="form-control" required>
+				</div>
+
+
+				<button type="submit" class="btn btn-primary">Guardar</button>
+				
+    <a  th:href="@{/pdf-agente}"class="btn btn-primary">Imprimir Agentes</a>
+
+			</form>
+			 </div>
+    </div>
+</body>
+</html>
